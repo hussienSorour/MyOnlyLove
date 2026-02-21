@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Video Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+            padding-top: 100px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            padding: 10px;
+            width: 90%;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+        /* Loading Screen */
+        #loadingScreen {
+            display: none;
+        }
+        .spinner {
+            margin: 20px auto;
+            border: 6px solid #eee;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="box" id="loginBox">
+
+    <h3>Everything begins with what we share… and it also ends with it ♾️💞♾️.</h3>
+    <h3>Between those two mirrors ♾️♾️, our story is told in four moments ♾️🎲🎲🎲🎲♾️.</h3>
+    <h3>Two of them belong to a time when we did not yet know what we were becoming as two separate beginnings, under the same mirrored day, in different seasons 🌺❄️.</h3>
+    <h3>The third is the sealed promise that aligned their paths on the shiny rings 💍💍.</h3>
+    <h3>The fourth is the moment one world stepped gently with the other world as the first entry to our home ⛪️⛪️.</h3>
+    <h3>-----------------------------------</h3>
+    <h3>Do not read these moments the way they are written. Transform them. 
+        Let each moment reveal a single value born just from the sum of its day and its month.</h3>
+    <h3>♾️💚💚❤️❤️.</h3>
+    <h3>-----------------------------------</h3>
+    <h3>1-🎲 From the first pair 💚💚, keep what remains when one shadows the other 💚⛔️💚.</h3>
+    <h3>2-🎲 but for the later pair ❤️❤️ keep what you get when they unite.</h3>
+    <h3>But What about the years 📆📆📆📆??</h3>
+    <h3>📆📆📆📆♾️.</h3>
+    <h3>3-🎲 Compare the two beginnings 📆📆.</h3>
+    <h3>4-🎲 Then compare what now walks side by side. it should be 01 not just a 1 📆📆.</h3>
+    <h3>-----------------------------------</h3>
+    <h3>Follow the story in four moments. Only four results should remain, each result must be 2 digits like a train.</h3>
+    <h3>-----------------------------------</h3>
+    <h3>Place them in the middle of the mirrors with the same order the story unfolded, and the lock will understand you.♾️💞♾️🔐</h3>
+
+    <p>Note: The 1st password is what was used for the 1st prize</p> 
+
+    <input type="text" id="userID" placeholder="Enter 1st Password">
+
+    <input type="password" id="password" placeholder="Enter 2nd Password">
+    <br>
+    <button onclick="checkPassword()">Unlock My Heart ❤️🔒</button>
+    <p id="error">Wrong password!</p>
+</div>
+
+<!-- Loading Screen -->
+<div class="box" id="loadingScreen">
+
+    <p>Please wait ⏳ 60 seconds, Read carefully tell i Preparing your 2nd 🎁</p>
+    <div class="spinner"></div>
+
+    <h3>Loloo you are my love and my only Love ❤️... </h3>
+    <h3>The second and last one is already opend, I love your smart mind, and you really deserve the 2nd 🎁 </h3>
+    <h3>❤️❤️ I love you all the entire time ❤️❤️</h3>
+
+    <div class="spinner"></div>
+    <p>Please wait ⏳ 60 seconds, Read carefully tell i Preparing your 2nd 🎁</p>
+</div>
+
+<script>
+function checkPassword() {
+    var entered2ndPass = document.getElementById("password").value;
+    var entered1stPass = document.getElementById("userID").value;
+
+    // 🔐 CHANGE PASSWORD HERE
+    var correct1stPassword = "3031119972003";
+    var correct1stPassword_2 = "30031119972003";
+    var correct2ndPassword = "300821060130";
+
+
+
+    if (entered2ndPass === correct2ndPassword && entered1stPass === correct1stPassword) 
+    {
+        // Hide login box
+        document.getElementById("loginBox").style.display = "none";
+
+        // Show loading screen
+        document.getElementById("loadingScreen").style.display = "block";
+
+        // ⏳ WAIT 5 SECONDS THEN REDIRECT
+        setTimeout(function(){
+        // 🔗 PUT YOUR GOOGLE DRIVE LINK HERE
+        window.location.href =
+        "https://drive.google.com/file/d/1CParQeG9kmFPRoeWXTDULOm9bbmPvnSU/view?usp=sharing";
+        }, 60000); // 60000ms = 60 seconds
+
+    }
+    else if (entered2ndPass === correct2ndPassword && entered1stPass === correct1stPassword_2) 
+
+    {
+        // Hide login box
+        document.getElementById("loginBox").style.display = "none";
+
+        // Show loading screen
+        document.getElementById("loadingScreen").style.display = "block";
+
+        // ⏳ WAIT 5 SECONDS THEN REDIRECT
+        setTimeout(function(){
+        // 🔗 PUT YOUR GOOGLE DRIVE LINK HERE
+        window.location.href =
+        "https://drive.google.com/file/d/1CParQeG9kmFPRoeWXTDULOm9bbmPvnSU/view?usp=sharing";
+        }, 10000); // 10000ms = 10 seconds
+    } 
+    else
+    {
+        document.getElementById("error").style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
