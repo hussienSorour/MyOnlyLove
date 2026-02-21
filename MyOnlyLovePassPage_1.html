@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Video Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+            padding-top: 100px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            margin: auto;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input {
+            padding: 10px;
+            width: 90%;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        #error {
+            color: red;
+            display: none;
+        }
+        /* Loading Screen */
+        #loadingScreen {
+            display: none;
+        }
+        .spinner {
+            margin: 20px auto;
+            border: 6px solid #eee;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="box" id="loginBox">
+    <h3>Two souls 💞 coupled with the 30th… ♾️</h3>
+    <h3>Entered the world years apart… ❤️ One in the 🌸 season of beginnings, the other in the calm before ❄️ winter.</h3>
+    <h2> ------------------------------------- </h2>    
+    <h3>In the same day we saw the world 🌍 
+        With different months close beside the coupled number. My beginning comes first. Yours follows quietly behind.
+        Day and months lead the way… 
+        When you reach the years, don’t separate them… fate didn’t. let both of our years stand together❤️</h3>
+    <h2> ------------------------------------- </h2>    
+    <h3>Arrange them carefully 🧩🕵️‍♀️🔑</h3> 
+    <h3> To unlock my heart ✨🔐</h3>
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button onclick="checkPassword()">Unlock My Heart ❤️🔒</button>
+    <p id="error">Wrong password!</p>
+</div>
+
+<!-- Loading Screen -->
+<div class="box" id="loadingScreen">
+
+    <p>Please wait ⏳ 60 seconds, Read carefully tell i Preparing your 1st 🎁</p>
+    <div class="spinner"></div>
+
+    <h3>Loloo you are my love and my only Love❤️❤️❤️...
+        Some doors are not meant to be opened just once !!🕵️‍♀️.
+        What you found was only the first one 🧩 and not the last.
+        The real love doesn’t reveal itself so easily.
+        It waits… quietly… for the one who knows where to look next.
+        Don’t stop now loloo, you need to scan one QR more !!🕵️‍♀️ </h3>
+    <h3>The second is already hidden in my soul where you can hear my voice 👾🧩🕵️‍♀️🔑.</h3>
+
+    <div class="spinner"></div>
+    <p>Please wait ⏳ 60 seconds, Read carefully tell i Preparing your 1st 🎁</p>
+</div>
+
+<script>
+function checkPassword() {
+    var entered = document.getElementById("password").value;
+
+    // 🔐 CHANGE PASSWORD HERE
+    var correctPassword = "3031119972003";
+    var correctPassword_2 = "30031119972003";
+
+
+    if (entered === correctPassword) 
+    {
+        // Hide login box
+        document.getElementById("loginBox").style.display = "none";
+
+        // Show loading screen
+        document.getElementById("loadingScreen").style.display = "block";
+
+        // ⏳ WAIT 5 SECONDS THEN REDIRECT
+        setTimeout(function(){
+        // 🔗 PUT YOUR GOOGLE DRIVE LINK HERE
+        window.location.href =
+        "https://drive.google.com/file/d/1gLhWX4K6bdQoBXL6q2z_mK8KA88iCbtO/view?usp=sharing";
+        }, 60000); // 60000ms = 60 seconds
+
+    }
+    else if (entered === correctPassword_2)
+    {
+        // Hide login box
+        document.getElementById("loginBox").style.display = "none";
+
+        // Show loading screen
+        document.getElementById("loadingScreen").style.display = "block";
+
+        // ⏳ WAIT 5 SECONDS THEN REDIRECT
+        setTimeout(function(){
+        // 🔗 PUT YOUR GOOGLE DRIVE LINK HERE
+        window.location.href =
+        "https://drive.google.com/file/d/1gLhWX4K6bdQoBXL6q2z_mK8KA88iCbtO/view?usp=sharing";
+        }, 60000); // 10000ms = 10 seconds
+    } 
+    else
+    {
+        document.getElementById("error").style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
