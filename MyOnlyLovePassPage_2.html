@@ -4,19 +4,33 @@
     <title>Secure Video Access</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background: #f4f4f4;
+       body {
+            margin: 0;
+            padding: 0;
             padding-top: 100px;
-        }
+            /* Background image */
+            background-image: url("images/background.jpg");
+            /* Make it full screen */
+            background-size: cover;
+            /* Keep it centered */
+            background-position: center;
+            /* Prevent repeating */
+            background-repeat: no-repeat;
+            /* Smooth scrolling effect */
+             background-attachment: fixed;
+            /* Better text readability */
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+
+            }
         .box {
-            background: white;
+            background: rgba(0, 0, 0, 0.45); /* Darkness level */
             padding: 30px;
             margin: auto;
             width: 400px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            color: white;
         }
         input {
             padding: 10px;
@@ -45,7 +59,12 @@
             height: 40px;
             animation: spin 1s linear infinite;
         }
-
+        .backdrop {
+            backdrop-filter: blur(6px);
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 15px;
+        }
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
@@ -56,6 +75,7 @@
 
 
 <div class="box" id="loginBox">
+    <div class="backdrop">
 
     <h3>Everything begins with what we share… and it also ends with it ♾️💞♾️.</h3>
     <h3>Between those two mirrors ♾️♾️, our story is told in four moments ♾️🎲🎲🎲🎲♾️.</h3>
@@ -86,6 +106,7 @@
     <br>
     <button onclick="checkPassword()">Unlock My Heart ❤️🔒</button>
     <p id="error">Wrong password!</p>
+</div>
 </div>
 
 <!-- Loading Screen -->
@@ -154,4 +175,5 @@ function checkPassword() {
 </script>
 
 </body>
+
 </html>
