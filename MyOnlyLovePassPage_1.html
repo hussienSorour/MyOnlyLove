@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            font-family: Arial;
-            text-align: center;
-            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
             padding-top: 100px;
-        }
+            /* Background image */
+            background-image: url("images/background.jpg");
+            /* Make it full screen */
+            background-size: cover;
+            /* Keep it centered */
+            background-position: center;
+            /* Prevent repeating */
+            background-repeat: no-repeat;
+            /* Smooth scrolling effect */
+             background-attachment: fixed;
+            /* Better text readability */
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+
+            }
         .box {
-            background: white;
+            background: rgba(0, 0, 0, 0.45); /* Darkness level */
             padding: 30px;
             margin: auto;
             width: 400px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            color: white;
         }
         input {
             padding: 10px;
@@ -35,6 +49,12 @@
         /* Loading Screen */
         #loadingScreen {
             display: none;
+        }
+         .backdrop {
+            backdrop-filter: blur(6px);
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            border-radius: 15px;
         }
         .spinner {
             margin: 20px auto;
@@ -56,20 +76,25 @@
 
 
 <div class="box" id="loginBox">
-    <h3>Two souls 💞 coupled with the 30th… ♾️</h3>
-    <h3>Entered the world years apart… ❤️ One in the 🌸 season of beginnings, the other in the calm before ❄️ winter.</h3>
-    <h2> ------------------------------------- </h2>    
+ <div class="backdrop">
+
+    <h3>Two souls💞coupled with the 30th…♾️</h3>
+    <h3>Entered the world years apart…❤️</h3>
+    <h3>One in the 🌸 season of beginnings, the other in the calm before ❄️ winter.</h3>
+    <h2> ------------------------------------ </h2>    
     <h3>In the same day we saw the world 🌍 
         With different months close beside the coupled number. My beginning comes first. Yours follows quietly behind.
         Day and months lead the way… 
         When you reach the years, don’t separate them… fate didn’t. let both of our years stand together❤️</h3>
-    <h2> ------------------------------------- </h2>    
+    <h2> ------------------------------------ </h2>    
     <h3>Arrange them carefully 🧩🕵️‍♀️🔑</h3> 
     <h3> To unlock my heart ✨🔐</h3>
     <input type="password" id="password" placeholder="Password">
     <br>
     <button onclick="checkPassword()">Unlock My Heart ❤️🔒</button>
     <p id="error">Wrong password!</p>
+     
+     </div>
 </div>
 
 <!-- Loading Screen -->
@@ -138,4 +163,5 @@ function checkPassword() {
 </script>
 
 </body>
+
 </html>
